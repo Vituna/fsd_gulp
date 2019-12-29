@@ -1,0 +1,23 @@
+extends base/_layout
+block head
+    title Uikit Forms
+block page
+    .container
+        form(action="#").date
+            h2.hat Найдём номера под ваши пожелания
+            .arridepar
+                .arrival
+                    .arridepar-name прибытие
+                    input(type="text" placeholder="ДД.ММ.ГГГГ").arridepar-date 
+                        
+                .departure.arrival
+                    .arridepar-name выезд
+                    input(type="text" placeholder="ДД.ММ.ГГГГ").arridepar-date 
+
+            .guests
+                .guests-text.arridepar-name гости
+                .nimberguests.arridepar-date
+                    span.text-7 Сколько гостей
+
+            button(type="submit").input подобрать номер
+

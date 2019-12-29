@@ -1,0 +1,38 @@
+%svg-common {
+	background: url("../images/sprites/main.svg") no-repeat;
+}
+
+.svg-image-phone-rounded {
+	@extend %svg-common;
+	background-position: 0 0;
+	background-size: (72/72)*100% (72/72)*100%;
+	width: 72px;
+
+}
+@mixin svg-pos-image-phone-rounded {
+	background-position: 0 0;
+}
+@mixin svg-image-phone-rounded-hover {
+	.svg-image-phone-rounded {
+		@include svg-pos-image-phone-rounded-hover
+	}
+}
+
+.svg-image-phone-rounded:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: (72/72)*100%;
+}
+
+.svg-image-phone-rounded-dims {
+	width: 72px;
+	height: 72px;
+}
+
+
+.image-by-height { width:auto; }
+.image-by-height:before { content:none; }
+.image-by-height > svg { height: inherit; }
+.image-by-height > img { height: inherit !important; vertical-align: top !important; margin: 0 !important; padding: 0 !important; max-width: none !important; max-height: none !important; border: 0 !important; opacity: 0 !important; }
